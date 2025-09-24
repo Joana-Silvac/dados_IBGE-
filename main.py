@@ -3,5 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url=""
+url="https://censo2022.ibge.gov.br/panorama/"
+resposta= requests.get(url)
+soup=BeautifulSoup(resposta.text, 'lxml')
+
+
 
