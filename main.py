@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import time 
+import platform
 from selenium import webdriver
 
 
@@ -37,8 +38,12 @@ print(dic)
 
 
 #fazer o codigo identificar se a maquina é windows ou linux e fazer ser criado um arquivo csv com o data frame dentro
-
+sistema=platform.system
 #windows
-
+if sistema=="Windows":
+     pass
+     
 
 #Linux
+elif sistema == "Linux":
+     pass

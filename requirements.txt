@@ -1,7 +1,8 @@
 
-time
+
 pandas
 requests
 beautifulsoup4
+platform
 selenium
 time
