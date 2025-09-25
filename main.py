@@ -18,7 +18,7 @@ homens=[]
 if tudo:
         parte_dos_itens=tudo.find_all('div',class_="item item-v1")
         for i in parte_dos_itens:
-            #nessa parte mandei o código ir atras dos anos q correspondem a porcentagem
+            #nessa parte mandei o código ir atras dos anos q correspondem a porcentagem 
             texto=i.find('div', class_="legenda")
             if texto:
                texto= texto.text.strip()
