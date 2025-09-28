@@ -19,31 +19,42 @@ homens=[]
 if tudo:
         parte_dos_itens=tudo.find_all('div',class_="item item-v1")
         for i in parte_dos_itens:
-            #nessa parte mandei o código ir atras dos anos q correspondem a porcentagem 
+
             texto=i.find('div', class_="legenda")
             if texto:
                texto= texto.text.strip()
                idades.append(texto)
-            #nessa parte o codigo deve corresponder a porcentagem das mulheres e então caso encontre adicionar na lista mulheres[]
-
-            #E nessa parte o codigo tem q ir atrás da porcentagem masculina e adicionar na lista homens[]
 
 
+            valor_mulher = i.find('div', class_="valor-2 legenda-2")
+            if valor_mulher:
+                 mulheres.append(valor_mulher.text.strip())
+            else:
+                  mulheres.append('')
+
+            valor_homem = i.find('div', class_="valor-1 legenda-1")
+            if valor_homem:
+                 homens.append(valor_homem.text.strip())
+            else:
+                  homens.append('')
+
+
+min_len = min(len(idades),
+              len(mulheres), len(homens))
+idades = idades[:min_len]
+mulheres = mulheres[:min_len]
+homens = homens[:min_len]
 
 dic={"Idade": idades, "Mulheres": mulheres,"Homens": homens}
 
-print(dic) 
-
-#criar o dataframe com o dic
 
 
-#fazer o codigo identificar se a maquina é windows ou linux e fazer ser criado um arquivo csv com o data frame dentro
-sistema=platform.system
-#windows
+df = pd.DataFrame(dic)
+sistema=platform.system()
+
 if sistema=="Windows":
-     pass
-     
-
-#Linux
+     df.to_csv('piramide_etaria.csv', index=False, encoding= 'utf-8-sig')
 elif sistema == "Linux":
-     pass
+          df.to_csv('piramide_etaria.csv', index=False, encoding= 'utf-8')
+
+pesquisador.quit()
