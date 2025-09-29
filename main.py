@@ -75,7 +75,7 @@ if cor_raca_card:
                 cor_raca_categorias.append(categoria)
                 cor_raca_populacao.append(populacao)
 
-dic_cor_raca = {"Cor_Raca": cor_raca_categorias, "Populacao": cor_raca_populacao}
+dic_cor_raca = {"Cor-Raça": cor_raca_categorias, "População": cor_raca_populacao}
 
 df_cor_raca = pd.DataFrame(dic_cor_raca)
 sistema=platform.system()
