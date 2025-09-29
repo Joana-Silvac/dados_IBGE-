@@ -14,8 +14,7 @@ O script pode ser executado em Windows e Linux, e os resultados são salvos em f
 Sempre que for necessário atualizar os dados sobre a distribuição etária e cor ou raça da população brasileira, ou como base para estudos e projetos de análise demográfica.
 
 6. How (Como funciona?)
- 1. O usuário deve clonar o repositório no GitHub;
- 2. Instale as dependências: pip install -r requirements.txt
- 3. Execute: python main.py
-
-O código irá acessar o site do IBGE, processar os dados sobre faixa etária e cor ou raça no Brasil, gerando um CSV com a análise para cada um separadamente.
+    1. O usuário deve clonar o repositório no GitHub;
+    2. Instale as dependências: pip install -r requirements.txt
+    3. Execute: python main.py
+    4. O código irá acessar o site do IBGE, processar os dados sobre faixa etária e cor ou raça no Brasil, gerando um CSV com a análise para cada um separadamente.
