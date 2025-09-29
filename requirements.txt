@@ -1,8 +1,5 @@
-
-
 pandas
-requests
-beautifulsoup4
+BeautifulSoup
 platform
-selenium
 time
+selenium

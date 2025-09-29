@@ -1,17 +1,17 @@
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 import time 
 import platform
 from selenium import webdriver
-
+  
 
 pesquisador=webdriver.Chrome()
 pesquisador.get("https://censo2022.ibge.gov.br/panorama/")
-time.sleep(3)
+time.sleep(4)
 soup=BeautifulSoup(pesquisador.page_source,"html.parser")
 
-#aqui é sobre pirâmide etária
+#Pirâmide etária
+
 tudo = soup.find('div', id="piramide-etaria", class_="grafico-piramideEtaria piramideV2")
 idades=[]
 mulheres=[]
@@ -47,7 +47,7 @@ mulheres = mulheres[:min_len]
 homens = homens[:min_len]
 
 dic={"Idade": idades, "Mulheres": mulheres,"Homens": homens}
-
+print(dic)
 
 
 df = pd.DataFrame(dic)
@@ -58,7 +58,8 @@ if sistema=="Windows":
 elif sistema == "Linux":
           df.to_csv('piramide_etaria.csv', index=False, encoding= 'utf-8')
 
-#e aqui é sobre cor-raça
+#Cor-raça
+
 cor_raca_categorias = []
 cor_raca_populacao = []
 
