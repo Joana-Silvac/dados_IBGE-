@@ -40,14 +40,7 @@ if tudo:
                   homens.append('')
 
 
-min_len = min(len(idades),
-              len(mulheres), len(homens))
-idades = idades[:min_len]
-mulheres = mulheres[:min_len]
-homens = homens[:min_len]
-
 dic={"Idade": idades, "Mulheres": mulheres,"Homens": homens}
-
 
 
 df = pd.DataFrame(dic)
