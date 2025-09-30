@@ -47,7 +47,7 @@ mulheres = mulheres[:min_len]
 homens = homens[:min_len]
 
 dic={"Idade": idades, "Mulheres": mulheres,"Homens": homens}
-print(dic)
+
 
 
 df = pd.DataFrame(dic)
