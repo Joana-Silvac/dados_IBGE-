@@ -25,7 +25,8 @@ if tudo:
             if texto:
                texto= texto.text.strip()
                idades.append(texto)
-
+            else:
+                  idades.append('')
 
             valor_mulher = i.find('div', class_="valor-2 legenda-2")
             if valor_mulher:
@@ -80,3 +81,4 @@ elif sistema == "Linux":
           df_cor_raca.to_csv('cor_raca.csv', index=False, encoding= 'utf-8')
 
 pesquisador.quit()
+
